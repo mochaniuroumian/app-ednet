@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "npm run dev:h5",
-    "build": "npm run build:h5",
+    "serve": "npm run dev:mp-weixin",
+    "build": "npm run build:mp-weixin",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
     "build:h5": "cross-env NODE_ENV=production UNI_PLATFORM=h5 vue-cli-service uni-build",
@@ -44,7 +44,7 @@
   "dependencies": {
     "@dcloudio/uni-app-plus": "^2.0.0-31920210428001",
     "@dcloudio/uni-h5": "^2.0.0-31920210428001",
-    "@dcloudio/uni-helper-json": "*",
+    "@dcloudio/uni-helper-json": "^1.0.13",
     "@dcloudio/uni-i18n": "^2.0.0-31920210428001",
     "@dcloudio/uni-mp-360": "^2.0.0-31920210428001",
     "@dcloudio/uni-mp-alipay": "^2.0.0-31920210428001",
