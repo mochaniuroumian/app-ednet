@@ -1,8 +1,47 @@
 .container{
     &.product {
         .hello {
-            height: 20%;
+            height: 10%;
+            width: 90%;
+            display: flex;
+            padding: 5%;
+            .user-name {
+                width: 75%;
+                margin: auto;
+                color: $uni-text-color-inverse;
+                font-size: $uni-font-size-lger;
+            }
+            .user-img {
+                width: 130rpx;
+                height: 130rpx;
+                image {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $uni-border-radius-circle;
+                }
+            }
+        }
+        .product-tab {
             width: 100%;
+            height: 65%;
+            .scrollbox {
+                width: 100%;
+	        	height: 300rpx;
+		        white-space: nowrap;
+                .segmented-control {
+                    width: 150%;
+                    padding: 0 5%;
+                    .segmented-control__item {
+		              width: 30%;
+		              height: 100%;
+                      border: none;
+                      border-radius: $uni-border-radius-lg;
+                    }
+                }
+            }
+            .segmented-control__text{ 
+                color: #fff !important; 
+            }
         }
     }
 }

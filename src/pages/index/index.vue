@@ -49,12 +49,9 @@ import {uniIcons} from '@dcloudio/uni-ui'
 		data() {
 			return {
 				curDot: 0,
-				username: '',
-				userimg: ''
+				username: '未登录用户',
+				userimg: '/static/logo.png'
 			}
-		},
-		onLoad() {
-
 		},
 		methods: {
           swiperChange(e) {
@@ -85,8 +82,12 @@ import {uniIcons} from '@dcloudio/uni-ui'
               success: res => {
                 this.username = res.userInfo.nickName
 				this.userimg = res.userInfo.avatarUrl
-				uni.redirectTo({
-					url: '/pages/product/product?name=' + this.username + '&img=' + this.userimg,
+				uni.$emit('update',{
+					name: this.username,
+					img: this.userimg
+				})
+				uni.switchTab({
+					url: '/pages/product/product',
 				})
               },
 			  fail() {
@@ -95,6 +96,12 @@ import {uniIcons} from '@dcloudio/uni-ui'
 			  }
 			});
 		  }
+		},
+		onShow() {
+		    uni.hideTabBar()
+		},
+		onHide(){
+			uni.showTabBar()
 		},
 		components: {uniIcons}
 	}
