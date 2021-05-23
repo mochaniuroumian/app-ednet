@@ -32,6 +32,7 @@
 </template>
 <script>
 import {uniSegmentedControl} from '@dcloudio/uni-ui'
+import gongxiang from '@/components/gongxiang'
 export default {
     data() {
         return {
@@ -47,6 +48,9 @@ export default {
         uni.$on('update',(data)=>{
           console.log('监听到时间来自update,携带参数msg为:' + data.uname)
         })
+    },
+    components: {
+        gongxiang
     },
     methods: {
         productItem(res){
