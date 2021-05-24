@@ -1,28 +1,19 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		// {
-		// 	"path": "pages/product/product"
-		// },
+		{
+			"path": "pages/product/product"
+		},
 		{
 			"path": "pages/index/index"
 		}
-		 ,{
-		 	"path": "pages/product/product"
-		 }
+		//  ,{
+		//  	"path": "pages/product/product"
+		//  }
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "e德互联",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	},
-	"tabBar": {
-		"list": [{
-		  "pagePath": "pages/index/index",
-		  "text": "首页"
-		},{
-		  "pagePath": "pages/product/product",
-		  "text": "其他"
-		}]
-	  }
+	}
 }

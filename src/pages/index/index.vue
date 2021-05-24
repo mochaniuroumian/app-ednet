@@ -34,7 +34,7 @@
             <uni-icons class="leftright arrowright" type="arrowright" size="50" color="#c7c7c799" @click.stop="rightImg"></uni-icons>
 		</view>
 		<view class="index-next">
-		    <button open-type="getUserInfo" hover-class="none" plain="true" @getuserinfo="nextpage">
+		    <button open-type="getUserInfo" plain="true" @getuserinfo="nextpage">
 			  <image mode="aspectFit" src="/static/you.png"></image>
 		    </button>
 		</view>
@@ -77,17 +77,12 @@ import {uniIcons} from '@dcloudio/uni-ui'
             uni.makePhoneCall({phoneNumber: phone})
 		  },
 		  nextpage() {
-            //this.userdetail = res.detail; 
 			uni.getUserInfo({
               success: res => {
                 this.username = res.userInfo.nickName
 				this.userimg = res.userInfo.avatarUrl
-				uni.$emit('update',{
-					name: this.username,
-					img: this.userimg
-				})
-				uni.switchTab({
-					url: '/pages/product/product',
+				uni.redirectTo({
+					url: '/pages/product/product?name=' + this.username + '&img=' + this.userimg,
 				})
               },
 			  fail() {

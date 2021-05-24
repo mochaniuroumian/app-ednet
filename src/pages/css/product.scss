@@ -15,18 +15,15 @@
                 width: 130rpx;
                 height: 130rpx;
                 image {
-                    width: 100%;
-                    height: 100%;
                     border-radius: $uni-border-radius-circle;
                 }
             }
         }
         .product-tab {
             width: 100%;
-            height: 65%;
+            height: 73%;
             .scrollbox {
-                width: 100%;
-	        	height: 300rpx;
+	        	height: 120rpx;
 		        white-space: nowrap;
                 .segmented-control {
                     width: 150%;
@@ -42,6 +39,17 @@
             .segmented-control__text{ 
                 color: #fff !important; 
             }
+        }
+        .pro-content {
+            height: calc(100% - 120rpx);
+            width: 90%;
+            margin: 0 5%;
+            border-radius: $uni-border-radius-lg;
+            background-color: $uni-bg-color-href;
+        }
+        Footer {
+            width: 100%;
+            height: 10%;
         }
     }
 }

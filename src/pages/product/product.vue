@@ -10,29 +10,25 @@
               <uni-segmented-control :current="product" :values="productItems" @clickItem="productItem" 
               styleType="button" activeColor="#a9d682"></uni-segmented-control>
           </scroll-view>
-          <view class="content">
-            <view v-show="product === 0">
-                选项卡1的内容
-            </view>
-            <view v-show="product === 1">
+          <view class="pro-content">
+            <Gongxiang v-if="product === 0">
+            </Gongxiang>
+            <view v-if="product === 1">
                 选项卡2的内容
             </view>
-            <view v-show="product === 2">
+            <view v-if="product === 2">
                 选项卡3的内容
             </view>
           </view>
       </view>
-
-      <!-- <view class="tabbar">
-          <uni-segmented-control :current="current" :values="items" @clickItem="onClickItem" 
-              styleType="button" activeColor="#a9d682"></uni-segmented-control>
-      </view> -->
+      <Footer></Footer>
       <image class="background" mode="aspectFill" src="/static/background.jpg"></image>
     </view>
 </template>
 <script>
 import {uniSegmentedControl} from '@dcloudio/uni-ui'
-import gongxiang from '@/components/gongxiang'
+import gongxiang from '../../components/gongxiang'
+import footer from '../../components/footer'
 export default {
     data() {
         return {
@@ -40,17 +36,17 @@ export default {
 			uimg: '/static/logo.png',
             current:0,
             product:0,
-            items:['','+',''],
             productItems:['共享建站','域名申请','企业邮箱','虚拟主机','微信小程序']
         }
     },
-    created() {
-        uni.$on('update',(data)=>{
-          console.log('监听到时间来自update,携带参数msg为:' + data.uname)
-        })
+    onLoad(options) {
+        this.uname = options.name,
+        this.uimg = options.img
     },
     components: {
-        gongxiang
+        uniSegmentedControl,
+        gongxiang,
+        footer
     },
     methods: {
         productItem(res){
@@ -59,7 +55,6 @@ export default {
         onClickItem(res){
           this.current=res.currentIndex;
         }
-    },
-    components: {uniSegmentedControl}
+    }
 }
 </script>
