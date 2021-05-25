@@ -79,7 +79,7 @@ image {
           }
           button {
               width: 40%;
-              background-color: #a9d682;
+              background-color: $uni-bg-color-green;
               border-radius: $uni-border-radius-lg;
           }
         }
@@ -126,4 +126,5 @@ image {
 }
 @import "product.scss";
 @import "gongxiang.scss";
+@import "yuming.scss";
 @import "footer.scss";

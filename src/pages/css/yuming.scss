@@ -1,0 +1,43 @@
+.yuming {
+    .yulike {
+        width: 92%;
+        padding: 4%;
+        text-align: center;
+    }
+    .segmented-control {
+        padding: 0 5%;
+        .segmented-control__item {
+          width: 33%;
+          border: none;
+          border-radius: $uni-border-radius-lg;
+          font-size: $uni-font-size-lgtitle;
+        }
+    }
+    .segmented-control__text{ 
+        color: $uni-text-color !important; 
+    }
+    .yucard-content {
+        .yucard-name {
+            padding: 8%;
+            text-align: center;
+            .name-text {
+                font-size: $uni-font-size-lgtitle;
+            }
+        }
+        .yucard-des {
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+        .yucard-price {
+            padding: 4%;
+            .price-text {
+                font-size: $uni-font-size-lgtitle;
+                color: $uni-bg-color-green;
+                font-weight: bold;
+            }
+            .price-year {
+                font-size: $uni-font-size-lger;
+            }
+        }
+    }
+}

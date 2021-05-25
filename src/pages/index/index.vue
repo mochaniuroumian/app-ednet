@@ -92,12 +92,6 @@ import {uniIcons} from '@dcloudio/uni-ui'
 			});
 		  }
 		},
-		onShow() {
-		    uni.hideTabBar()
-		},
-		onHide(){
-			uni.showTabBar()
-		},
 		components: {uniIcons}
 	}
 </script>

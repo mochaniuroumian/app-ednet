@@ -48,7 +48,8 @@
 			"sdkConfigs": { /* SDK配置 */
 
 			}
-		}
+		},
+		"runmode" : "liberate"
 	},
 	"quickapp": { /* 快应用特有相关 */
 

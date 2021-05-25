@@ -37,7 +37,7 @@
                 }
             }
             .segmented-control__text{ 
-                color: #fff !important; 
+                color: $uni-text-color-inverse !important; 
             }
         }
         .pro-content {
@@ -46,6 +46,7 @@
             margin: 0 5%;
             border-radius: $uni-border-radius-lg;
             background-color: $uni-bg-color-href;
+            overflow: hidden;
         }
         Footer {
             width: 100%;
