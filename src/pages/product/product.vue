@@ -13,9 +13,9 @@
           <scroll-view class="pro-content" scroll-y="true">
             <Gongxiang v-if="product === 0"></Gongxiang>
             <Yuming v-if="product === 1"></Yuming>
-            <view v-if="product === 2">
-                选项卡3的内容
-            </view>
+            <Mailbox v-if="product === 2"></Mailbox>
+            <Vhost v-if="product === 3"></Vhost>
+            <Wxapp v-if="product === 4"></Wxapp>
           </scroll-view>
       </view>
       <Footer></Footer>
@@ -26,6 +26,9 @@
 import {uniSegmentedControl} from '@dcloudio/uni-ui'
 import gongxiang from '@/components/gongxiang'
 import yuming from '@/components/yuming'
+import mailbox from '@/components/mailbox'
+import vhost from '@/components/vhost'
+import wxapp from '@/components/wxapp'
 import footer from '@/components/footer'
 export default {
     data() {
@@ -44,6 +47,9 @@ export default {
         uniSegmentedControl,
         gongxiang,
         yuming,
+        mailbox,
+        vhost,
+        wxapp,
         footer
     },
     methods: {
