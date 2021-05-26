@@ -1,3 +1,38 @@
 .vhost {
-    
+    .winvhost, .oldbetter, .type, .linux, .front, .tool {
+        width: 96%;
+        padding: 2%;
+        text-align: center;
+    }
+    .windowsimg, .linuximg {
+        width: calc(100% - 40rpx);
+        padding: 40rpx 20rpx 10rpx 20rpx;
+        text-align: center;
+        height: 80rpx;
+        image {
+            width: 80rpx;
+        }
+    }
+    .type {
+        display: flex;
+    }
+    .vhost-text, .linux-text {
+        font-size: $uni-font-size-lgtitle;
+    }
+    .type-text {
+        width: 33%;
+        color: #001d56;
+    }
+    .tool {
+        display: flex;
+    }
+    .caddy, .docker {
+        width: calc(50% - 40rpx);
+        text-align: center;
+        height: 60rpx;
+        padding: 0 20rpx;
+        image {
+            width: 60rpx;
+        }
+    }
 }

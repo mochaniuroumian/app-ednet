@@ -1,3 +1,93 @@
 .wxapp {
-    
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    .wxlogo {
+        width: calc(100% - 40rpx);
+        padding: 20rpx;
+        text-align: center;
+        height: 80rpx;
+        image {
+            width: 80rpx;
+        }
+    }
+    .wvservice, .third, .wxbutton, .wxprice {
+        width: 97%;
+        padding: 1.5%;
+        text-align: center;
+    }
+    .wvservice {
+        color: #6b58a5;
+        font-size: $uni-font-size-lger;
+    }
+    .third, .vipalone-text {
+        color: $uni-color-subtitle;
+    }
+    .wxbutton {
+        display: flex;
+        button {
+            width: 40%;
+            border-radius: $uni-font-size-base;
+            color: $uni-text-color-inverse;
+            font-size: $uni-font-size-lg;
+            line-height: 70rpx;
+        }
+        .register-text {
+            background-color: #6b58a5;
+        }
+        .viproad-text {
+            background-color: #a9d682;
+        }
+    }
+    .biggirl {
+        height: 570rpx;
+        padding: 1.5% 25%;
+        width: 50%;
+    }
+    .authority, .audit, .develop, .payment {
+        position: absolute;
+        border-radius: $uni-border-radius-circle;
+        color: $uni-text-color-inverse;
+        text-align: center;
+        width: 120rpx;
+        height: 120rpx;
+        line-height: 120rpx;
+        font-size: $uni-font-size-sm;
+    }
+    .authority {
+        top: 47%;
+        left: 40rpx;
+        background-color: #94da57;
+    }
+    .audit {
+        top: 47%;
+        right: 40rpx;
+        background-color: #70d2f0;
+    }
+    .develop {
+        top: 65%;
+        left: 20rpx;
+        background-color: $uni-bg-color-purple;
+    }
+    .payment {
+        top: 65%;
+        right: 20rpx;
+        background-color: #f3a734;
+    }
+    .wxprice {
+        position: absolute;
+        bottom: 20rpx;
+        background-color: #ffffffb3;
+        .vipalone-text {
+            font-size: $uni-font-size-sm;
+        }
+        .price-text {
+            font-size: $uni-font-size-biger;
+            color: $uni-bg-color-purpledeep;
+            font-weight: bold;
+        }
+        .price-year {
+            font-size: $uni-font-size-lgtitle;
+        }
+    }
 }

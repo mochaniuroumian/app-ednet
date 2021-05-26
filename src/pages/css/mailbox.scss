@@ -1,3 +1,52 @@
 .mailbox {
-    
+    position: relative;
+    height: 100%;
+    .ali, .alichoose, .edeali {
+        width: 96%;
+        padding: 2%;
+        text-align: center;
+    }
+    .aite {
+        width: calc(100% - 40rpx);
+        padding: 20rpx;
+        text-align: center;
+        height: 120rpx;
+        image {
+            width: 120rpx;
+        }
+    }
+    .edeali, .customer-text {
+        color: $uni-text-color-inverse;
+        background-color: $uni-bg-color-purple;
+    }
+    .goldservice, .afterservice, .vipservice {
+        width: 92%;
+        padding: 1.5% 4%;
+        font-size: $uni-font-size-lgtitle;
+    }
+    .goldservice {
+        color: #ece7b8;
+        font-weight: bold;
+    }
+    .afterservice {
+        color: #a0e0aa;
+        font-weight: bold;
+        text-align: center;
+    }
+    .vipservice {
+        color: #edd0cf;
+    }
+    .customerservice {
+        button {
+            width: 40%;
+            border-radius: $uni-border-radius-lg;
+        }
+    }
+    .customerimg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 42%;
+        height: 42%;
+    }
 }
