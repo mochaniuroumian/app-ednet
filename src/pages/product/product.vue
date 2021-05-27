@@ -1,6 +1,5 @@
 <template>
     <view class="container product">
-
       <view class="hello">
           <view class="user-name">欢迎您，{{uname}}</view>
           <view class="user-img"><image mode="aspectFill" :src="uimg"></image></view>
@@ -18,7 +17,7 @@
             <Wxapp v-if="product === 4"></Wxapp>
           </scroll-view>
       </view>
-      <Footer></Footer>
+      <Footer :choose = choose></Footer>
       <image class="background" mode="aspectFill" src="/static/background.jpg"></image>
     </view>
 </template>
@@ -33,6 +32,11 @@ import footer from '@/components/footer'
 export default {
     data() {
         return {
+            choose: {
+                chooseCard: 0,
+                choosePhone: 0,
+                addColor: "#8080ff"
+            },
             uname: '未登录用户',
 			uimg: '/static/logo.png',
             product:0,

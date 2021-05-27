@@ -5,15 +5,23 @@
 		},
 		{
 			"path": "pages/index/index"
-		}
+		},
 		//  ,{
 		//  	"path": "pages/product/product"
 		//  }
+		{
+			"path": "pages/cardinfo/cardinfo"
+		},
+		{
+			"path": "pages/contact/contact",
+			"navigationBarTitleText": "联系方式"
+		}
 	],
 	"globalStyle": {
+		//"navigationStyle":"custom",
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "e德互联",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#f2daf2",
+		"backgroundColor": "#f2daf2"
 	}
 }

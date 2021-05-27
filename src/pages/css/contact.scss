@@ -1,0 +1,57 @@
+.contact {
+    .contact-con {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .map {
+        width: 100%;
+        height: 40%;
+        map {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .contactinfo {
+        width: 90%;
+        height: 55%;
+        margin: 5% 5% 0 5%;
+        border-radius: $uni-border-radius-lg;
+        background-color: $uni-bg-color-href;
+        overflow: hidden;
+        .erweima {
+            width: 180rpx;
+            height: 180rpx;
+            margin: 3% auto;
+            border-radius: $uni-border-radius-base;
+            overflow: hidden;
+        }
+        .infos {
+            width: 95%;
+            padding: 2.5%;
+            height: 50rpx;
+            display: flex;
+            image {
+                width: 40rpx;
+            }
+            .name {
+                width: 25%;
+                line-height: 50rpx;
+                padding-left: 5rpx;
+            }
+            .name-text {
+                width: calc(75% - 45rpx);
+                font-size: $uni-font-size-base;
+                color: $uni-color-subtitle;
+                line-height: 50rpx;
+            }
+        }
+    }
+    Footer {
+        width: 100%;
+        height: 10%;
+    }
+}

@@ -2,7 +2,7 @@
   <view class="container">
 	<view class="content">
 		<view class="logo"><image mode="aspectFit" src="/static/logo.png"></image></view>
-		<view class="colorwhite bigfont">e德互联</view>
+		<view class="colorwhite bigfont ede">e德互联</view>
 		<view class="colorwhite titleright">
 			<view class="connull"></view>
 			<text>云端共享.服务升级</text>
