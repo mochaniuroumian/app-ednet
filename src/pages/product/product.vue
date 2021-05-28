@@ -17,7 +17,7 @@
             <Wxapp v-if="product === 4"></Wxapp>
           </scroll-view>
       </view>
-      <Footer :choose = choose></Footer>
+      <Footer :choose=choose @bottomPro="bottomPro"></Footer>
       <image class="background" mode="aspectFill" src="/static/background.jpg"></image>
     </view>
 </template>
@@ -57,8 +57,11 @@ export default {
         footer
     },
     methods: {
-        productItem(res){
-          this.product=res.currentIndex;
+        productItem(res) {
+          this.product = res.currentIndex;
+        },
+        bottomPro(index) {
+          this.product = index
         }
     }
 }

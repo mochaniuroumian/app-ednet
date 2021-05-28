@@ -39,6 +39,7 @@ image {
 .titleright {
     display: flex;
     margin-bottom: 50rpx;
+    text-shadow: 0 4rpx 8rpx $uni-text-color-grey;
     .connull {
         width: 260rpx;
     }

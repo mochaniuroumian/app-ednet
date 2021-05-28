@@ -14,7 +14,7 @@
           <text class="tryhard">努力</text>
       </view>
       <view class="become"><text class="become-text">成为</text></view>
-      <view class="networkservice"><button class="network-text">您的网络服务商</button></view>
+      <view class="networkservice"><button class="network-text" open-type="contact">您的网络服务商</button></view>
     </view>
       <Footer :choose = choose></Footer>
       <image class="background" mode="aspectFill" src="/static/background.jpg"></image>

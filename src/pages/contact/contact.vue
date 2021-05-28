@@ -40,22 +40,22 @@ export default {
                 {
                     icon: "/static/gps.png",
                     name: "公司名称：",
-                    nametext: "天津市德林瑞泰科技开发有限公司天津市德林瑞泰科技开发有限公司"
+                    nametext: "天津市德林瑞泰科技开发有限公司"
                 },
                 {
                     icon: "/static/site.png",
                     name: "地址：",
-                    nametext: "天津市德林瑞泰科技开发有限公司"
+                    nametext: "天津市和平区南京路305号经济联合大厦2315-2317"
                 },
                 {
                     icon: "/static/phone.png",
                     name: "电话：",
-                    nametext: "天津市德林瑞泰科技开发有限公司"
+                    nametext: "4006511688"
                 },
                 {
                     icon: "/static/mail.png",
                     name: "邮箱：",
-                    nametext: "天津市德林瑞泰科技开发有限公司天津市德林瑞泰科技开发有限公司"
+                    nametext: "contact@114mail.com"
                 }
             ]
         }

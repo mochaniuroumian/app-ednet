@@ -16,5 +16,39 @@
     .nav {
         text-align: center;
         border-radius: 100rpx;
+        .uni-drawer {
+            bottom: 10%;
+        }
+        .uni-drawer__content {
+            top: 55%;
+            width: 100%;
+            background: #484658e6;
+        }
+        .uni-drawer--right {
+            transform: translateY(100%);
+        }
+        .uni-drawer__content--visible {
+            transform: translateY(0px);
+        }
+        .navul {
+            display: flex;
+            height: 100%;
+            flex-wrap: wrap;
+          .navlist {
+            width: 21%;
+            height: 43%;
+            padding: 2%;
+            image {
+                width: 70%;
+                height: 50%;
+                padding: 15%;
+            }
+            .navname {
+                text-align: center;
+                color: $uni-text-color-inverse;
+                font-size: $uni-font-size-sm;
+            }
+          }
+        }
     }
 }

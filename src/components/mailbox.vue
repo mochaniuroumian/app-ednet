@@ -7,7 +7,7 @@
       <view class="goldservice"><text class="gold-text">金牌服务</text></view>
       <view class="afterservice"><text class="after-text">无忧售后</text></view>
       <view class="vipservice"><text class="vipservice-text">1V1专属客服</text></view>
-      <view class="customerservice"><button class="customer-text">免费咨询</button></view>
+      <view class="customerservice"><button class="customer-text" open-type="contact">免费咨询</button></view>
       <view class="customerimg"><image mode="aspectFill" src="/static/smallgirl.png"></image></view>
   </view>
 </template>

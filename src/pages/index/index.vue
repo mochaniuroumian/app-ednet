@@ -18,20 +18,16 @@
 			                      <image mode="aspectFit" src="/static/Group 25.png"></image>
 			                      <view><text>微信小程序</text><text>注册.开发.代维</text></view>
 		                        </view>
-								<button type="primary" @tap="call('4006511688')">免费升级</button>
+								<button type="primary" open-type="contact">免费升级</button>
+								<!-- <button type="primary" @tap="call('4006511688')">免费升级</button> -->
 							</view>
-                        </swiper-item>
-                        <swiper-item>
-                            <view class="swiper-item">B</view>
-                        </swiper-item>
-                        <swiper-item>
-                            <view class="swiper-item">C</view>
                         </swiper-item>
                     </swiper>
                 </view>
             </view>
-			<uni-icons class="leftright arrowleft" type="arrowleft" size="50" color="#c7c7c799" @click.stop="leftImg"></uni-icons>
-            <uni-icons class="leftright arrowright" type="arrowright" size="50" color="#c7c7c799" @click.stop="rightImg"></uni-icons>
+			<!-- <uni-icons class="leftright arrowleft" type="arrowleft" size="50" color="#c7c7c799" @click.stop="leftImg"></uni-icons> -->
+			<uni-icons class="leftright arrowleft" type="arrowleft" size="50" color="#c7c7c799"></uni-icons>
+            <uni-icons class="leftright arrowright" type="arrowright" size="50" color="#c7c7c799"></uni-icons>
 		</view>
 		<view class="index-next">
 		    <button open-type="getUserInfo" plain="true" @getuserinfo="nextpage">
