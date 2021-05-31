@@ -7,13 +7,9 @@
         text-align: center;
     }
     .aite {
-        width: calc(100% - 40rpx);
         padding: 20rpx;
         text-align: center;
-        height: 120rpx;
-        image {
-            width: 120rpx;
-        }
+        height: 16%;
     }
     .edeali, .customer-text {
         color: $uni-text-color-inverse;
@@ -23,18 +19,24 @@
         width: 92%;
         padding: 1.5% 4%;
         font-size: $uni-font-size-lgtitle;
+        display: flex;
+        height: 10%;
     }
     .goldservice {
         color: #ece7b8;
         font-weight: bold;
+        align-items: center;
     }
     .afterservice {
         color: #a0e0aa;
         font-weight: bold;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     .vipservice {
         color: #edd0cf;
+        align-items: center;
     }
     .customerservice {
         button {

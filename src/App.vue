@@ -8,6 +8,9 @@
 		},
 		onHide: function() {
 			console.log('App Hide')
+		},
+		globalData: {
+			imageUrl: "https://tempc.51comm.cn/imgs/ednet/"
 		}
 	}
 </script>

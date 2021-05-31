@@ -18,32 +18,33 @@
 </template>
 
 <script>
+const app = getApp()
 export default {
     data() {
       return {
         cardlist: [
           {
             name: '商务模板A',
-            img: '/static/al.jpg',
-            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E6%A8%A1%E6%9D%BF/al.jpg'
+            img: app.globalData.imageUrl + 'a.jpg',
+            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%88%E5%88%AB%E5%88%A0%EF%BC%89/al.jpg'
 
           },
           {
             name: '商务模板B',
-            img: '/static/bl.jpg',
-            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E6%A8%A1%E6%9D%BF/bl.jpg'
+            img: app.globalData.imageUrl + 'b.jpg',
+            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%88%E5%88%AB%E5%88%A0%EF%BC%89/bl.jpg'
 
           },
           {
             name: '商务模板C',
-            img: '/static/bl.jpg',
-            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E6%A8%A1%E6%9D%BF/bl.jpg'
+            img: app.globalData.imageUrl + 'c.jpg',
+            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%88%E5%88%AB%E5%88%A0%EF%BC%89/clp.png'
 
           },
           {
             name: '商务模板D',
-            img: '/static/bl.jpg',
-            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E6%A8%A1%E6%9D%BF/bl.jpg'
+            img: app.globalData.imageUrl + 'd.jpg',
+            httpimg: 'https://cms.ednet.cn/UserFiles/teste/Images/%E5%B0%8F%E7%A8%8B%E5%BA%8F%EF%BC%88%E5%88%AB%E5%88%A0%EF%BC%89/dlp.png'
 
           }
         ]

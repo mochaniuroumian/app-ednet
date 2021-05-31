@@ -1,6 +1,6 @@
 <template>
   <view class="wxapp">
-      <view class="wxlogo"><image src="/static/Group 25.png"></image></view>
+      <view class="wxlogo"><image :src="imageUrl25"></image></view>
       <view class="wvservice">
         <text class="service-text">注册&nbsp;开发&nbsp;代维</text>
       </view>
@@ -9,7 +9,7 @@
         <button class="register-text">立即注册</button>
         <button class="viproad-text">会员免费通道</button>
       </view>
-      <view class="biggirl"><image mode="aspectFill" src="/static/biggirl.png"></image></view>
+      <view class="biggirl"><image mode="aspectFill" :src="imageUrlbig"></image></view>
       <view class="authority"><text class="authority-text">代理注册</text></view>
       <view class="audit"><text class="audit-text">审核发布</text></view>
       <view class="develop"><text class="develop-text">配置开发</text></view>
@@ -24,8 +24,14 @@
 </template>
 
 <script>
+const app = getApp()
 export default {
-
+    data() {
+        return {
+            imageUrl25:app.globalData.imageUrl + "Group 25.png",
+            imageUrlbig:app.globalData.imageUrl + "biggirl.png"
+        }
+    }
 }
 </script>
 

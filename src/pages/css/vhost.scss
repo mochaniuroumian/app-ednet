@@ -1,17 +1,14 @@
 .vhost {
+    height: 100%;
     .winvhost, .oldbetter, .type, .linux, .front, .tool {
         width: 96%;
         padding: 2%;
         text-align: center;
     }
     .windowsimg, .linuximg {
-        width: calc(100% - 40rpx);
         padding: 40rpx 20rpx 10rpx 20rpx;
         text-align: center;
-        height: 80rpx;
-        image {
-            width: 80rpx;
-        }
+        height: 11%;
     }
     .type {
         display: flex;

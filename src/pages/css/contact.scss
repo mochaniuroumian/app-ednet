@@ -23,30 +23,33 @@
         background-color: $uni-bg-color-href;
         overflow: hidden;
         .erweima {
-            width: 180rpx;
-            height: 180rpx;
+            height: 30%;
             margin: 3% auto;
             border-radius: $uni-border-radius-base;
             overflow: hidden;
         }
         .infos {
-            width: 95%;
-            padding: 3%;
-            height: 48rpx;
+            width: 96%;
+            padding: 1% 2%;
+            height: 13%;
             display: flex;
             image {
-                width: 40rpx;
+                width: 7%;
             }
             .name {
                 width: 25%;
-                line-height: 50rpx;
+                // line-height: 50rpx;
                 padding-left: 5rpx;
+                display: flex;
+                align-items: center;
             }
             .name-text {
-                width: calc(75% - 45rpx);
+                width: 68%;
                 font-size: $uni-font-size-base;
                 color: $uni-color-subtitle;
-                line-height: 50rpx;
+                // line-height: 50rpx;
+                display: flex;
+                align-items: center;
             }
         }
     }

@@ -2,13 +2,13 @@
   <view class="footer">
       <view class="cardinfos">
         <button plain="true" @click="cardinfo">
-          <image v-if="choose.chooseCard === 0" mode="aspectFit" src="/static/cardinfo.png"></image>
-          <image v-if="choose.chooseCard === 1" mode="aspectFit" src="/static/cardchoose.png"></image>
+          <image v-if="choose.chooseCard === 0" mode="aspectFit" :src="cardinfoUrl"></image>
+          <image v-if="choose.chooseCard === 1" mode="aspectFit" :src="cardchoose"></image>
         </button>
       </view>
       <view class="nav" :style="'background:' + choose.addColor">
-        <button plain="true" @click="nav">
-            <image mode="aspectFit" src="/static/jia.png"></image>
+        <button plain="true" @click="nav" :disabled="choose.disabled">
+            <image mode="aspectFit" :src="jia"></image>
         </button>
         <uni-drawer ref="showRight" mode="right" width="100%" @change="drawerchange">
           <view class="navul">
@@ -21,8 +21,8 @@
       </view>
       <view class="contacts">
         <button plain="true" @click="contact">
-          <image v-if="choose.choosePhone === 0" mode="aspectFit" src="/static/contact.png"></image>
-          <image v-if="choose.choosePhone === 1" mode="aspectFit" src="/static/contactchoose.png"></image>
+          <image v-if="choose.choosePhone === 0" mode="aspectFit" :src="contactUrl"></image>
+          <image v-if="choose.choosePhone === 1" mode="aspectFit" :src="contactchoose"></image>
         </button>
       </view>
   </view>
@@ -30,47 +30,53 @@
 
 <script>
 import {uniDrawer} from '@dcloudio/uni-ui'
+const app = getApp()
 export default {
     data() {
       return {
+        cardinfoUrl: app.globalData.imageUrl + "cardinfo.png",
+        cardchoose: app.globalData.imageUrl + "cardchoose.png",
+        jia: app.globalData.imageUrl + "jia.png",
+        contactUrl: app.globalData.imageUrl + "contact.png",
+        contactchoose: app.globalData.imageUrl + "contactchoose.png",
         navlist: [
           {
-            imageUrl: "/static/yuming.png",
+            imageUrl: app.globalData.imageUrl + "yuming.png",
             navname: "域名",
             productId: 1
           },
           {
-            imageUrl: "/static/youxiang.png",
+            imageUrl: app.globalData.imageUrl + "youxiang.png",
             navname: "邮箱",
             productId: 2
           },
           {
-            imageUrl: "/static/xuji.png",
+            imageUrl: app.globalData.imageUrl + "xuji.png",
             navname: "虚拟主机",
             productId: 3
           },
           {
-            imageUrl: "/static/app.png",
+            imageUrl: app.globalData.imageUrl + "app.png",
             navname: "App",
             productId: 0
           },
           {
-            imageUrl: "/static/gongxiang.png",
+            imageUrl: app.globalData.imageUrl + "gongxiang.png",
             navname: "共享建站",
             productId: 0
           },
           {
-            imageUrl: "/static/zhuomian.png",
+            imageUrl: app.globalData.imageUrl + "zhuomian.png",
             navname: "桌面开发",
             productId: 0
           },
           {
-            imageUrl: "/static/Group 25.png",
+            imageUrl: app.globalData.imageUrl + "Group 25.png",
             navname: "微信小程序",
             productId: 4
           },
           {
-            imageUrl: "/static/gongzhong.png",
+            imageUrl: app.globalData.imageUrl + "gongzhong.png",
             navname: "微信公众号",
             productId: 0
           }

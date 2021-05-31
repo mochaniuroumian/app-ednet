@@ -29,7 +29,7 @@ export default {
     data() {
         return {
           yunumber: 0,
-          yuItems: ['.COM', '.CN', '.ORG'],
+          yuItems: ['.COM', '.CN', '.CO'],
           yucard: [
               {
                   name: '国际顶级域名',
@@ -43,9 +43,9 @@ export default {
                   price: '100'
               },
               {
-                  name: '国内顶级域名',
-                  des: '',
-                  price: '100'
+                  name: '商业公司的缩写',
+                  des: '英文“Corporation、Company”（商业公司）的缩写，且仅2个字母，含义明确、简单易记，方便公众理解。极具竞争力的域名。',
+                  price: '220'
               }
           ]
         }

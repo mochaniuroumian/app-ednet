@@ -1,7 +1,7 @@
 <template>
   <view class="container">
 	<view class="content">
-		<view class="logo"><image mode="aspectFit" src="/static/logo.png"></image></view>
+		<view class="logo"><image mode="aspectFit" :src="imageUrllogo"></image></view>
 		<view class="colorwhite bigfont ede">e德互联</view>
 		<view class="colorwhite titleright">
 			<view class="connull"></view>
@@ -15,7 +15,7 @@
                             <view class="swiper-item">
 								<view class="colorwhite bigfont">重磅推出</view>
 								<view class="colorwhite swiper-appcont">
-			                      <image mode="aspectFit" src="/static/Group 25.png"></image>
+			                      <image mode="aspectFit" :src="imageUrl25"></image>
 			                      <view><text>微信小程序</text><text>注册.开发.代维</text></view>
 		                        </view>
 								<button type="primary" open-type="contact">免费升级</button>
@@ -31,22 +31,27 @@
 		</view>
 		<view class="index-next">
 		    <button open-type="getUserInfo" plain="true" @getuserinfo="nextpage">
-			  <image mode="aspectFit" src="/static/you.png"></image>
+			  <image mode="aspectFit" :src="imageUrlyou"></image>
 		    </button>
 		</view>
 	</view>
-	<image class="background" mode="aspectFill" src="/static/background.jpg"></image>
+	<image class="background" mode="aspectFill" :src="imageUrlback"></image>
   </view>
 </template>
 
 <script>
 import {uniIcons} from '@dcloudio/uni-ui'
+const app = getApp()
 	export default {
 		data() {
 			return {
 				curDot: 0,
 				username: '未登录用户',
-				userimg: '/static/logo.png'
+				userimg: app.globalData.imageUrl + 'logo.png',
+				imageUrl25:app.globalData.imageUrl + "Group 25.png",
+				imageUrllogo:app.globalData.imageUrl + "logo.png",
+				imageUrlyou:app.globalData.imageUrl + "you.png",
+				imageUrlback:app.globalData.imageUrl + "background.jpg"
 			}
 		},
 		methods: {
@@ -83,7 +88,7 @@ import {uniIcons} from '@dcloudio/uni-ui'
               },
 			  fail() {
 				this.username = '未登录用户'
-				this.userimg = '/static/logo.png'
+				this.userimg = app.globalData.imageUrl + 'logo.png'
 			  }
 			});
 		  }

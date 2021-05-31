@@ -5,7 +5,7 @@
           <view class="user-img"><image mode="aspectFill" :src="uimg"></image></view>
       </view>
       <view class="product-tab">
-          <scroll-view class="scrollbox" scroll-x="true" show-scrollbar="false">
+          <scroll-view class="scrollbox" scroll-x="true">
               <uni-segmented-control :current="product" :values="productItems" @clickItem="productItem" 
               styleType="button" activeColor="#a9d682"></uni-segmented-control>
           </scroll-view>
@@ -18,7 +18,7 @@
           </scroll-view>
       </view>
       <Footer :choose=choose @bottomPro="bottomPro"></Footer>
-      <image class="background" mode="aspectFill" src="/static/background.jpg"></image>
+      <image class="background" mode="aspectFill" :src="imageUrlback"></image>
     </view>
 </template>
 <script>
@@ -29,16 +29,19 @@ import mailbox from '@/components/mailbox'
 import vhost from '@/components/vhost'
 import wxapp from '@/components/wxapp'
 import footer from '@/components/footer'
+const app = getApp()
 export default {
     data() {
         return {
             choose: {
                 chooseCard: 0,
                 choosePhone: 0,
-                addColor: "#8080ff"
+                addColor: "#8080ff",
+                disabled: false
             },
             uname: '未登录用户',
-			uimg: '/static/logo.png',
+			uimg: app.globalData.imageUrl + 'logo.png',
+            imageUrlback:app.globalData.imageUrl + "background.jpg",
             product:0,
             productItems:['共享建站','域名申请','企业邮箱','虚拟主机','微信小程序']
         }
