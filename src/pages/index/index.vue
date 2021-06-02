@@ -54,6 +54,12 @@ const app = getApp()
 				imageUrlback:app.globalData.imageUrl + "background.jpg"
 			}
 		},
+		onLoad: function () {
+            uni.showShareMenu({
+            withShareTicket:true,
+            menus:["shareAppMessage","shareTimeline"]
+            })
+        },
 		methods: {
           swiperChange(e) {
 	        this.curDot = e.detail.current;
@@ -91,7 +97,34 @@ const app = getApp()
 				this.userimg = app.globalData.imageUrl + 'logo.png'
 			  }
 			});
-		  }
+		  },
+		  //发送给朋友
+  onShareAppMessage(res) {
+  // 此处的distSource为分享者的部分信息，需要传递给其他人
+  let distSource = uni.getStorageSync('distSource');
+  if (distSource) {
+  return {
+  title: 'e德互联欢迎你',
+  type: 0,
+  path: '/pages/indexmusic/index',
+  summary: "",
+  imageUrl: "这个是分享图片地址"
+  }
+  }
+  },
+  //分享到朋友圈
+  onShareTimeline(res) {
+  let distSource = uni.getStorageSync('distSource');
+  if (distSource) {
+  return {
+  title: 'e德互联欢迎你',
+  type: 0,
+  query: 'id=' + distSource, //这个是参数
+  summary: "",
+  imageUrl: "这个是分享图片地址"
+  }
+  }
+  }
 		},
 		components: {uniIcons}
 	}

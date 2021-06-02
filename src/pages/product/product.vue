@@ -48,7 +48,11 @@ export default {
     },
     onLoad(options) {
         this.uname = options.name,
-        this.uimg = options.img
+        this.uimg = options.img,
+        uni.showShareMenu({
+            withShareTicket:true,
+            menus:["shareAppMessage","shareTimeline"]
+            })
     },
     components: {
         uniSegmentedControl,
@@ -65,7 +69,34 @@ export default {
         },
         bottomPro(index) {
           this.product = index
-        }
+        },
+        //发送给朋友
+  onShareAppMessage(res) {
+  // 此处的distSource为分享者的部分信息，需要传递给其他人
+  let distSource = uni.getStorageSync('distSource');
+  if (distSource) {
+  return {
+  title: 'e德互联欢迎你',
+  type: 0,
+  path: '/pages/indexmusic/index',
+  summary: "",
+  imageUrl: "这个是分享图片地址"
+  }
+  }
+  },
+  //分享到朋友圈
+  onShareTimeline(res) {
+  let distSource = uni.getStorageSync('distSource');
+  if (distSource) {
+  return {
+  title: 'e德互联欢迎你',
+  type: 0,
+  query: 'id=' + distSource, //这个是参数
+  summary: "",
+  imageUrl: "这个是分享图片地址"
+  }
+  }
+  }
     }
 }
 </script>

@@ -12,6 +12,22 @@
 		{
 			"path": "pages/contact/contact",
 			"navigationBarTitleText": "联系方式"
+		},
+		{
+			"path": "pages/indexmusic/index",
+			"style":{
+				"navigationBarBackgroundColor": "#fff",
+		        "backgroundColor": "#f2daf2",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+		 	"path": "pages/index1/index",
+			 "style":{
+				"navigationBarBackgroundColor": "#fff",
+		        "backgroundColor": "#f2daf2",
+				"navigationBarTextStyle": "black"
+			}
 		}
 	],
 	"globalStyle": {
